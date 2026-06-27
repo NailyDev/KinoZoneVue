@@ -15,9 +15,17 @@ body {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'trebuchetms';
+  src: url('fonts/trebuchetms.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --font-anticva: "Anticva", sans-serif;
+  --font-trebuchetms: "trebuchetms", sans-serif;
 
   --animate-slide-down: slide-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fade-in 0.8s ease-out forwards;

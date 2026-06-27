@@ -1,4 +1,5 @@
 <script setup>
+import Logo from '@/images/qqq.png'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -9,18 +10,34 @@ function goBack() {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen text-white">
-    <h1 class="font-['Anticva'] text-[64px] text-[#FA8938] animate-slide-down">
-      Регистрация
-    </h1>
-    <p class="text-[#595959] mt-4 text-[16px] animate-fade-in [animation-delay:0.3s]">
-      Скоро здесь будет форма регистрации
-    </p>
-    <button
-      @click="goBack"
-      class="mt-8 px-6 py-2 bg-linear-to-r from-[#DA500B] to-[#FA8938] rounded-[10px] text-white text-[14px] cursor-pointer transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[0_8px_25px_rgba(250,137,56,0.35)]"
-    >
-      На главную
-    </button>
+  <div>
+    <header>
+      <img :src="Logo" alt="">
+    </header>
+
+    <div class="flex flex-col items-center gap-4 text-white font-trebuchetms">
+      <h1>Регистрация</h1>
+
+      <div class="bg-[#343434] w-[375px] h-[35px] border border-[#6F6F6F] flex items-center justify-center text-[#6F6F6F] text-[15px]">
+        <input type="text" placeholder="Логин" class="w-[375px] h-[35px]">
+      </div>
+
+      <div class="bg-[#343434] w-[375px] h-[35px] border border-[#6F6F6F] flex items-center justify-center text-[#6F6F6F] text-[15px]">
+        <input type="email" placeholder="Email" class="w-[375px] h-[35px]">
+      </div>
+
+      <div class="bg-[#343434] w-[375px] h-[35px] border border-[#6F6F6F] flex items-center justify-center text-[#6F6F6F] text-[15px]">
+        <input type="password" placeholder="Пароль" class="w-[375px] h-[35px]">
+      </div>
+
+      <button class="bg-[#343434] w-[375px] h-[35px] border border-[#6F6F6F] flex items-center justify-center">
+        Зарегистрироваться
+      </button>
+
+      <div class="flex gap-1 text-[#FF6E2D]">
+        <span>Уже зарегистрирован?</span>
+        <a href="#">Авторизуйтесь!</a>
+      </div>
+    </div>
   </div>
 </template>
